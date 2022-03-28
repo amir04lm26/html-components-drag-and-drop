@@ -1,32 +1,20 @@
-namespace App {
-  export enum ProjectStatus {
-    Active = "active",
-    Finished = "finished",
-  }
+import { IDGenerator } from "../utils/id.js";
 
-  export const IDGenerator = {
-    base: 36,
-    start: 2,
-    end: 8,
-    generate() {
-      return (
-        Math.random().toString(this.base).substring(this.start, this.end) +
-        Date.now().toString(this.base).substring(this.start, this.end)
-      );
-    },
-  };
+export enum ProjectStatus {
+  Active = "active",
+  Finished = "finished",
+}
 
-  // Project Type
-  export class Project {
-    id: string;
+// Project Type
+export class Project {
+  id: string;
 
-    constructor(
-      public title: string,
-      public description: string,
-      public people: number,
-      public projectStatus: ProjectStatus
-    ) {
-      this.id = IDGenerator.generate();
-    }
+  constructor(
+    public title: string,
+    public description: string,
+    public people: number,
+    public projectStatus: ProjectStatus
+  ) {
+    this.id = IDGenerator.generate();
   }
 }
