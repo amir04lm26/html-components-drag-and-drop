@@ -1,5 +1,5 @@
-import { projectState } from "../state/project.js";
-import { Project } from "../models/project.js";
+import { projectState } from "../state/project";
+import { Project } from "../models/project";
 
 class ProjectStorage {
   private static storeID = "PROJECT_STORAGE";

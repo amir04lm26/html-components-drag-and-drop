@@ -1,10 +1,10 @@
-import { Component } from "./BaseComponent.js";
-import { ProjectItem } from "./ProjectItem.js";
-import { autoBind } from "../decorators/autoBind.js";
-import { projectState } from "../state/project.js";
-import { storedProjects } from "../utils/projectStorage.js";
-import { Project, ProjectStatus } from "../models/project.js";
-import { DragTarget } from "../models/dragAndDrop.js";
+import { Component } from "./BaseComponent";
+import { ProjectItem } from "./ProjectItem";
+import { autoBind } from "../decorators/autoBind";
+import { projectState } from "../state/project";
+import { storedProjects } from "../utils/projectStorage";
+import { Project, ProjectStatus } from "../models/project";
+import { DragTarget } from "../models/dragAndDrop";
 
 projectState.setInitializeData(storedProjects);
 

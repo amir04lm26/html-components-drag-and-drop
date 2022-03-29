@@ -1,7 +1,7 @@
 // import { DeepClone } from "../utils/clone.js";
 // Or
-import * as Clone from "../utils/clone.js";
-import { Project, ProjectStatus } from "../models/project.js";
+import * as Clone from "../utils/clone";
+import { Project, ProjectStatus } from "../models/project";
 
 interface IReceivedProject {
   title: string;
@@ -18,7 +18,7 @@ abstract class State<T> {
 
   constructor() {
     const self = this;
-    let timeout: number;
+    let timeout: NodeJS.Timeout;
     this._state = new Proxy([], {
       set: function (target: any, property, value, _receiver) {
         target[property] = value;

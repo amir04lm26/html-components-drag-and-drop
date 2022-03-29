@@ -1,4 +1,4 @@
-import { IDGenerator } from "../utils/id.js";
+import { IDGenerator } from "../utils/id";
 
 export enum ProjectStatus {
   Active = "active",
